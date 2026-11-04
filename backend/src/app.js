@@ -1,5 +1,5 @@
 require('dotenv').config(); const express = require('express'), cors = require('cors'), app = express();
-const allowedOrigins = (process.env.CORS_ORIGIN || 'http://localhost:5173,https://frontend-ashy-ten-u59jrggaqx.vercel.app')
+const allowedOrigins = (process.env.CORS_ORIGIN || 'http://localhost:5173,https://samgan-eyecare-full-stack-demo.vercel.app,https://frontend-ashy-ten-u59jrggaqx.vercel.app')
   .split(',').map(origin => origin.trim()).filter(Boolean);
 app.use(cors({ origin: (origin, callback) => callback(null, !origin || allowedOrigins.includes(origin)) })); app.use(express.json({ limit: '100kb' }));
 app.get('/api/health', (q, s) => s.json({ ok: true }));
