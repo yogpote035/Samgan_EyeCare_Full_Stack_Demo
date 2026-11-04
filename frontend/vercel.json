@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://samgan-eyecare-full-stack-demo.onrender.com/api/:path*"
+    }
+  ]
+}

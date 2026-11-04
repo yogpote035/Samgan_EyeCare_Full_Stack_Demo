@@ -28,5 +28,7 @@ Login: hospital code `DDH`, users `admin`, `reception`, `optometrist`, `doctor`,
 
 Remote MySQL hosts (including TiDB Cloud) use TLS with certificate verification enabled. Local MySQL hosts (`localhost`, `127.0.0.1`, or `::1`) connect without TLS.
 
+The Vercel frontend at `https://frontend-ashy-ten-u59jrggaqx.vercel.app` proxies `/api` requests to the Render backend. The backend's `CORS_ORIGIN` may be set to a comma-separated list of allowed origins; by default it allows the local Vite origin and this deployed frontend.
+
 ## Before real patient data
 Needs a security and privacy review (DPDP), HTTPS hosting, backups with a tested restore, MFA for admins, full audit coverage and file-upload hardening. This demo makes no compliance claim.
